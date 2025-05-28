@@ -1,0 +1,265 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.ClassName {
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    animation: pulse 2s infinite, colorChange 10s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% { color: #4a4a4a; }
+    25% { color: #ff6b6b; }
+    50% { color: #48c774; }
+    75% { color: #3273dc; }
+    100% { color: #4a4a4a; }
+}
+
+.task-time {
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    color: #4a4a4a;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%);
+    border-radius: 3px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff9a9e;
+    box-shadow: 0 0 0 3px rgba(255, 154, 158, 0.2);
+    transform: scale(1.02);
+}
+
+.Title {
+    font-weight: bold;
+}
+
+.Description {
+    min-height: 60px;
+}
+
+.ClassName {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.Submit {
+    background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%);
+    color: white;
+}
+
+.Submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 154, 158, 0.4);
+}
+
+.Reset {
+    background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
+    color: white;
+}
+
+.Reset:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(161, 196, 253, 0.4);
+}
+
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.ListElement {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: slideIn 0.5s ease-out;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ListElement::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.ListElement:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.liTitle {
+    text-align: center;
+    color: #4a4a4a;
+    margin: 0;
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.liTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.ListElement p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.RemoveTask {
+    background: linear-gradient(90deg, #ff6b6b 0%, #ff8e8e 100%);
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 6px;
+    align-self: flex-end;
+    margin-top: 10px;
+    transition: all 0.2s ease;
+}
+
+.RemoveTask:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(255, 107, 107, 0.4);
+}
+
+.task-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 10px;
+}
+
+.task-time {
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+    text-align: right;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .ListElement {
+        padding: 15px;
+    }
+
+    .liTitle {
+        font-size: 18px;
+    }
+}
